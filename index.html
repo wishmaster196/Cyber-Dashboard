@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cybersecurity Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<body class="dark">
+  <!-- Dark/Light Toggle -->
+  <div class="mode-toggle" onclick="toggleMode()">🌙</div>
+  <!-- Alerts -->
+<div id="alerts" class="alerts">
+  <div class="alert">New vulnerability detected in lab!</div>
+  <div class="alert">Skill proficiency updated</div>
+</div>
+  
+  <!-- rest of your existing header/hero -->
+  <header class="header fade-in">
+    ...
+  </header>
+<!-- Header / Hero -->
+<header class="header fade-in">
+  <h1>Cybersecurity Analyst | Ethical Hacker</h1>
+  <p>Risk Assessment · Security Testing · Defensive Strategy</p>
+</header>
+
+<!-- Professional Summary -->
+<section class="section fade-in">
+  <h3>Professional Summary</h3>
+  <p>
+    Cybersecurity analyst focused on identifying security risks,
+    testing system resilience, and strengthening defenses through
+    structured analysis and ethical testing methodologies.
+  </p>
+</section>
+
+<!-- Skills -->
+<section class="section fade-in">
+  <h3>Core Competencies</h3>
+
+  <div class="skill slide-left">
+    <span>Web Application Security</span>
+    <div class="bar"><div style="width:85%"></div></div>
+  </div>
+
+  <div class="skill slide-left">
+    <span>Network Security Testing</span>
+    <div class="bar"><div style="width:80%"></div></div>
+  </div>
+
+  <div class="skill slide-left">
+    <span>Linux Systems & Bash</span>
+    <div class="bar"><div style="width:75%"></div></div>
+  </div>
+
+  <div class="skill slide-left">
+    <span>Vulnerability Assessment</span>
+    <div class="bar"><div style="width:82%"></div></div>
+  </div>
+
+  <div class="skill slide-left">
+    <span>Threat Analysis</span>
+    <div class="bar"><div style="width:78%"></div></div>
+  </div>
+</section>
+
+<!-- Projects & Simulations -->
+<section class="section fade-in">
+  <h3>Projects & Simulations</h3>
+  <div class="filters">
+    <button onclick="filterProjects('all')">All</button>
+    <button onclick="filterProjects('web')">Web</button>
+    <button onclick="filterProjects('network')">Network</button>
+    <button onclick="filterProjects('cloud')">Cloud</button>
+    <button onclick="filterProjects('iot')">IoT</button>
+  </div>
+
+  <div id="projectsContainer">
+    <!-- Paste all your project cards here -->
+    <!-- Add class names like "web", "network", "cloud", "iot" for filtering -->
+    <!-- Add risk span in header for risk level -->
+  </div>
+</section>
+
+  <!-- Project Cards (8) -->
+  <!-- Project 1 -->
+  <div class="project-card slide-up">
+    <div class="project-header" onclick="toggleProject(this)">
+      <strong>Enterprise Web Security Assessment</strong>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="project-tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab(event, this)">Overview</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Tools</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Findings</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Impact</button>
+      </div>
+      <div class="tab-content active">
+        <p>Performed a detailed assessment of a financial services startup's web apps to identify OWASP Top 10 vulnerabilities.</p>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>Burp Suite, OWASP ZAP, SQLmap</li>
+          <li>Manual penetration testing + automated scans</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>12 critical and 28 medium vulnerabilities discovered</li>
+          <li>Security rating improved from 62% → 94%</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <p>Reduced data breach risk and improved compliance posture.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="project-card slide-up">
+    <div class="project-header" onclick="toggleProject(this)">
+      <strong>Password Audit & Policy Review</strong>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="project-tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab(event, this)">Overview</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Tools</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Findings</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Impact</button>
+      </div>
+      <div class="tab-content active">
+        <p>Evaluated corporate password policies and employee credentials for a tech company.</p>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>Hashcat, John the Ripper</li>
+          <li>Password hash analysis, policy review, employee training</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>35% of accounts were weak</li>
+          <li>Policy enforcement reduced risk by 75% in 2 weeks</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <p>Minimized credential-based attack risk and improved staff awareness.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="project-card slide-up">
+    <div class="project-header" onclick="toggleProject(this)">
+      <strong>Network Traffic & Vulnerability Simulation</strong>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="project-tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab(event, this)">Overview</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Tools</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Findings</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Impact</button>
+      </div>
+      <div class="tab-content active">
+        <p>Simulated network attacks in a lab environment to identify misconfigurations and insecure protocols.</p>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>Wireshark, Nmap, Nessus</li>
+          <li>Packet inspection, vulnerability scanning</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>Detected 9 misconfigured servers and unencrypted services</li>
+          <li>Implemented baseline mitigations</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <p>Improved network security posture and reduced attack surface.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 4 -->
+  <div class="project-card slide-up">
+    <div class="project-header" onclick="toggleProject(this)">
+      <strong>Phishing Simulation & Awareness Program</strong>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="project-tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab(event, this)">Overview</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Tools</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Findings</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Impact</button>
+      </div>
+      <div class="tab-content active">
+        <p>Tested staff susceptibility to phishing and implemented training for a SaaS company.</p>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>Gophish, Custom Awareness Training</li>
+          <li>Simulated phishing campaigns + follow-up training</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>Initial click-through rate: 28%</li>
+          <li>Post-training click-through: 6%</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <p>Reduced phishing risk and increased employee security awareness.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 5 -->
+  <div class="project-card slide-up">
+    <div class="project-header" onclick="toggleProject(this)">
+      <strong>IoT Device Security Audit</strong>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="project-tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab(event, this)">Overview</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Tools</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Findings</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Impact</button>
+      </div>
+      <div class="tab-content active">
+        <p>Analyzed smart home and IoT devices for security flaws and exposed weak configurations.</p>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>Shodan, Nmap, Wireshark</li>
+          <li>Firmware analysis, network sniffing</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>3 devices with default passwords</li>
+          <li>2 devices exposed sensitive data via HTTP</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <p>Strengthened IoT security and recommended vendor patches.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 6 -->
+  <div class="project-card slide-up">
+    <div class="project-header" onclick="toggleProject(this)">
+      <strong>Red Team Attack Simulation</strong>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="project-tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab(event, this)">Overview</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Tools</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Findings</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Impact</button>
+      </div>
+      <div class="tab-content active">
+        <p>Simulated full red team attacks for a corporate environment, testing detection and response.</p>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>Cobalt Strike, Metasploit, Nmap</li>
+          <li>Phishing, lateral movement, privilege escalation</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>7 critical gaps identified in SOC monitoring</li>
+          <li>Improved incident response workflow</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <p>Enhanced detection and response capabilities for client security team.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 7 -->
+  <div class="project-card slide-up">
+    <div class="project-header" onclick="toggleProject(this)">
+      <strong>Cloud Infrastructure Security Review</strong>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="project-tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab(event, this)">Overview</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Tools</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Findings</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Impact</button>
+      </div>
+      <div class="tab-content active">
+        <p>Assessed security configuration of cloud resources for a SaaS company.</p>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>AWS Inspector, CloudTrail, CIS Benchmarks</li>
+          <li>Configuration review and IAM audit</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>5 misconfigured storage buckets</li>
+          <li>3 IAM roles with excessive privileges</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <p>Implemented best practices for cloud security compliance.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 8 -->
+  <div class="project-card slide-up">
+    <div class="project-header" onclick="toggleProject(this)">
+      <strong>Wireless Network Penetration Test</strong>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="project-tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab(event, this)">Overview</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Tools</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Findings</button>
+        <button class="tab-btn" onclick="switchTab(event, this)">Impact</button>
+      </div>
+      <div class="tab-content active">
+        <p>Tested Wi-Fi networks for security vulnerabilities including WPA/WPA2 weaknesses and rogue APs.</p>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>Aircrack-ng, Wireshark, Kali Linux</li>
+          <li>Penetration testing, traffic analysis</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <ul>
+          <li>2 networks vulnerable to weak passwords</li>
+          <li>1 rogue AP discovered</li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <p>Secured wireless infrastructure and recommended stronger encryption policies.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- Terminal / Console -->
+<section class="section console fade-in">
+  <h3>Interactive Terminal</h3>
+  <div id="console-output"></div>
+  <div class="console-input">
+    <span>&gt;</span>
+    <input id="console-input" autocomplete="off">
+  </div>
+</section>
+
+<!-- Professional Contact Section -->
+<section class="section fade-in">
+  <h3>Contact</h3>
+  <div class="contact-cards">
+    <div class="contact-item">
+      <span class="icon">📧</span>
+      <a href="mailto:yourname@email.com" target="_blank">masterwish97@gmail.com</a></a>
+    </div>
+    <div class="contact-item">
+      <span class="icon">💼</span>
+      <a href="https://www.linkedin.com/in/username" target="_blank">linkedin.com/in/username</a>
+    </div>
+    <div class="contact-item">
+      <span class="icon">🐱</span>
+      <a href="https://github.com/username" target="_blank">github.com/username</a>
+    </div>
+    <div class="contact-item">
+      <span class="icon">📸</span>
+      <a href="https://instagram.com/username" target="_blank">@username</a>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+<footer>
+      <p>Wish ETH, Copyright &copy; 2026</p>
+    </footer>
+</html>
